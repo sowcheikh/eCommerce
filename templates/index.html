@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container pt-5">
+    <div class="row">
+    <div class="col-md-12">
+        <form class="card card-sm">
+            <div class="card-body row no-gutters align-items-center">
+                <div class="col">
+                    <input type="search" placeholder="Vous cherchez quoi" name="article_recherche" class="form-control form-control-borderless">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-success">Rechercher</button>
+                </div>
+            </div>
+        </form>
+        <style>
+            button[type="submit"]{
+                background-color: blue;
+            }
+        </style>
+    </div>
+</div>
+<div class="row">
+    {% for articles in articles %}
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-header">
+                <img src="{{ articles.image }}" alt="" class="img-fluid" width="100" height="300">
+            </div>
+            <div class="card-body">
+                <div class="card-title">{{ articles.libelle }}</div>
+                <div style="color:rgb(0, 0, 0); font-weight: bold;" class="card-text">{{ articles.prix }} Fcfa</div>
+                <button href="#" class="btn btn-info">Consulter</button>
+                <button id="#" class="btn ted btn-success">Acheter</button>
+            </div>
+        </div>
+        <style>
+            .col-md-3{
+                margin-bottom: 15px;
+                margin-top: 10px;
+            }
+
+        </style>
+    </div>
+    {% endfor %}
+</div>
+    </div>
+{% endblock %}

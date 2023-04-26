@@ -1,0 +1,28 @@
+{% load bootstrap_icons %}
+<!-- Navbar Start -->
+    <div class="container-fluid bg-secondary sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-secondary navbar-light p-lg-3">
+                <a href="{% url 'index' %}" class="navbar-brand d-lg-none">
+                    <h1 class="fw-bold m-0">Cheikh Sow</h1>
+                </a>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="" class="nav-item nav-link active">Accueil</a>
+                        <a href="" class="nav-item nav-link">Produits</a>
+                        <a href="" class="nav-item nav-link">Catégories</a>
+                    </div>
+                    <div class="ms-auto d-none d-lg-block">
+                         <a href="" class="btn btn-warning rounded py-2 px-3">Panier <i class="bi bi-cart4"></i></a>
+                        <a href="/admin" class="btn btn-success rounded-pill py-2 px-3">Créer un compte</a>
+                        <a href="/admin" class="btn btn-primary rounded-pill py-2 px-3">Se connecter</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
